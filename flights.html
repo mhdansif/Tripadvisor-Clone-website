@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find the best flight deals - Tripadvisor Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="only-compact">
+  <div id="header-container"></div>
+  <main>
+    <section class="hero">
+
+
+      <!-- Top Section: Flight Search -->
+      <header class="flight-search">
+        <h1>Find the best flight for the right price</h1>
+        <nav class="tabs">
+          <button class="tab active" onclick="selectTab(this)">Round Trip</button>
+          <button class="tab" onclick="selectTab(this)">One-way</button>
+          <button class="tab" onclick="selectTab(this)">Multi-city</button>
+        </nav>
+
+        <form class="search-form">
+          <div class="input-group">
+            <label>From:</label>
+            <input type="text" placeholder="Colombo (CMB)" />
+          </div>
+          <div class="input-group">
+            <label>To:</label>
+            <input type="text" placeholder="Tel Aviv (TLV)" />
+          </div>
+          <div class="input-group">
+            <label>Dates:</label>
+            <input type="text" placeholder="Jul 11 – Jul 18" />
+          </div>
+          <div class="input-group">
+            <select>
+              <option>1 Person, Economy</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-find">Find flights</button>
+        </form>
+
+        <div class="checkboxes">
+          <label><input type="checkbox" /> Prefer nonstop</label>
+          <label><input type="checkbox" /> Include nearby airports</label>
+        </div>
+      </header>
+
+      <!-- Reviews Section -->
+      <section class="reviews-section">
+        <div class="intro">
+          <div class="icon">💬</div>
+          <h3>See traveler reviews</h3>
+          <p>
+            Customer service, legroom, meals—find out what travelers loved (or didn’t love) in their airline reviews.
+            <a href="#">Browse all airlines</a>
+          </p>
+          <input type="search" placeholder="Search airlines" onkeyup="filterReviews(this.value)" />
+        </div>
+
+        <div class="reviews-cards" id="reviewCards">
+          <!-- Review Card 1 -->
+          <article class="review-card">
+            <p><img src="./Images/SL.jpg" alt="Srilankan Airlines"></p>
+            <h4>Srilankan Airlines</h4>
+            <p> (4.2) ⭐⭐⭐⭐ (82,334)</p>
+            <p><strong>Top rated in</strong> Customer Service</p>
+            <blockquote>"My niece was travelling with 2 bags and one got left in Dallas."</blockquote>
+          </article>
+
+          <!-- Review Card 2 -->
+          <article class="review-card">
+            <p><img src="./Images/Qatar.jpg" alt="Qatar Airways"></p>
+            <h4>Qatar Airways</h4>
+            <p>(5.0) ⭐⭐⭐⭐⭐ (63,755)</p>
+            <p><strong>Top rated in</strong> Inflight Entertainment</p>
+            <blockquote>"We were impressed with the quality of the staff at Charlotte airport."</blockquote>
+          </article>
+
+          <!-- Review Card 3 -->
+          <article class="review-card">
+            <p><img src="./Images/UAe.jpg" alt="Emirates Airlines"></p>
+            <h4>Emirates Airlines</h4>
+            <p>(4.7) ⭐⭐⭐⭐⭐ (56,631)</p>
+            <p><strong>Top rated in</strong> Customer Service</p>
+            <blockquote>"United was considerably cheaper for this trip from London."</blockquote>
+          </article>
+
+          <!-- Review Card 4 -->
+          <article class="review-card">
+            <p><img src="./Images/IR.jpg" alt="Indigo Airlines"></p>
+            <h4>Indigo Airlines</h4>
+            <p>(4.1) ⭐⭐⭐⭐ (21,478)</p>
+            <p><strong>Top rated in</strong> Legroom</p>
+            <blockquote>"Daniella Camacho was just amazing, helping every passenger!"</blockquote>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- FOOTER START -->
+      <footer class="trip-footer">
+        <div class="footer-top">
+          <div class="footer-logo"><img src="./Images/tripadvisor-icon.webp" alt="Tripadvisor">Tripadvisor</div>
+
+          <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy and Cookies Statement</a>
+            <a href="#">Cookie Consent</a>
+            <a href="#">Site Map</a>
+            <a href="#">How the site works</a>
+            <a href="signin.html">Contact Us</a>
+            <a href="#">Accessibility Statement</a>
+          </div>
+        </div>
+
+        <div class="footer-description">
+          <p>
+            Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications.
+            Listed prices may require a stay of a particular length or have blackout dates, qualifications or other
+            applicable restrictions. Tripadvisor LLC is not responsible for any content on external websites that are
+            not
+            owned or operated by Tripadvisor. Indicative hotel prices displayed on our “Explore” pages are estimates
+            extrapolated from historic pricing data.
+          </p>
+          <p>
+            Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be
+            sure
+            to check their site for a full disclosure of all applicable fees.
+          </p>
+          <a href="#" class="read-more" onclick="toggleMore(event)">Read more</a>
+          <p class="more-text" style="display:none;">
+            We strive to provide accurate and up-to-date information. Currency and country options are subject to
+            change. This
+            site is part of Tripadvisor Media Network.
+          </p>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2025 MOHAMED ANSIF All rights reserved.</span>
+          <div class="footer-meta">
+            <select id="countrySelect" class="footer-dropdown" onchange="updateCurrency()">
+              <option value="LK">Sri Lanka</option>
+              <option value="US">United States</option>
+              <option value="UK">United Kingdom</option>
+              <option value="CA">Canada</option>
+              <option value="AU">Australia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="IN">India</option>
+              <option value="JP">Japan</option>
+              <option value="CN">China</option>
+              <option value="DE">Germany</option>
+              <option value="FR">France</option>
+              <option value="IT">Italy</option>
+              <option value="BR">Brazil</option>
+              <option value="ZA">South Africa</option>
+              <option value="SG">Singapore</option>
+              <option value="MX">Mexico</option>
+              <option value="KR">South Korea</option>
+              <option value="SE">Sweden</option>
+              <option value="NO">Norway</option>
+              <option value="RU">Russia</option>
+            </select>
+
+            <select id="currencySelect" class="footer-dropdown">
+              <option value="LKR">LKR – ₨ (Sri Lankan Rupee)</option>
+              <option value="USD">USD – $ (US Dollar)</option>
+              <option value="GBP">GBP – £ (British Pound)</option>
+              <option value="CAD">CAD – C$ (Canadian Dollar)</option>
+              <option value="AUD">AUD – A$ (Australian Dollar)</option>
+              <option value="NZD">NZD – NZ$ (New Zealand Dollar)</option>
+              <option value="INR">INR – ₹ (Indian Rupee)</option>
+              <option value="JPY">JPY – ¥ (Japanese Yen)</option>
+              <option value="CNY">CNY – ¥ (Chinese Yuan)</option>
+              <option value="EUR">EUR – € (Euro)</option>
+              <option value="BRL">BRL – R$ (Brazilian Real)</option>
+              <option value="ZAR">ZAR – R (South African Rand)</option>
+              <option value="SGD">SGD – S$ (Singapore Dollar)</option>
+              <option value="MXN">MXN – $ (Mexican Peso)</option>
+              <option value="KRW">KRW – ₩ (South Korean Won)</option>
+              <option value="SEK">SEK – kr (Swedish Krona)</option>
+              <option value="NOK">NOK – kr (Norwegian Krone)</option>
+              <option value="RUB">RUB – ₽ (Russian Ruble)</option>
+            </select>
+          </div>
+
+        </div>
+      </footer>
+
+  </main>
+  <script src="index.js"></script>
+  <script src="load-header.js" defer></script>
+
+</body>
+
+</html>

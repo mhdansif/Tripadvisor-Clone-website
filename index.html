@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trip Advisor Header Toggle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="only-compact">
+  <div id="header-container"></div>
+  <!-- Header Before Scroll -->
+  <header id="headerFull" class="header">
+    <div class="head-logo"> <img src="./Images/tripadvisor-icon.webp" alt="Tripadvisor"> Tripadvisor</div>
+    <nav class="nav">
+      <a href="#">Discover</a>
+      <a href="#">Trips</a>
+      <a href="#">Review</a>
+      <a href="index.html">More</a>
+    </nav>
+    <div class="right-buttons">
+      <a href="signin.html" class="currency-link">🌐 LKR</a>
+      <a href="signin.html" class="sign-in">Sign in</a>
+    </div>
+  </header>
+
+  <!-- Header After Scroll -->
+  <header id="headerCompact" class="header hidden">
+    <div class="head-logo"> <img src="./Images/tripadvisor-icon.webp" alt="Tripadvisor"> Tripadvisor</div>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search" />
+
+    </div>
+    <nav class="nav">
+      <a href="#">Discover</a>
+      <a href="#">Trips</a>
+      <a href="#">Review</a>
+      <a href="#">More</a>
+    </nav>
+    <div class="right-buttons">
+      <a href="signin.html" class="currency-link">🌐 LKR</a>
+      <a href="signin.html" class="sign-in">Sign in</a>
+    </div>
+  </header>
+
+  <!-- Sub Navigation -->
+  <nav class="sub-nav hidden">
+    <a href="hotels.html">Hotels</a>
+    <a href="things-to-do.html">Things to Do</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="flights.html">Flights</a>
+    <a href="vacation-rentals.html">Vacation Rentals</a>
+    <a href="cruises.html">Cruises</a>
+    <a href="rental-cars.html">Rental Cars</a>
+    <a href="forum.html">Forum</a>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <section class="hero">
+      <h1>Do something fun</h1>
+      <div class="tabs">
+        <a href="#" class="tab active">🏠 Search All</a>
+        <a href="#" class="tab">🛏️ Hotels</a>
+        <a href="#" class="tab">📷 Things to Do</a>
+        <a href="#" class="tab">🍽️ Restaurants</a>
+        <a href="#" class="tab">✈️ Flights</a>
+        <a href="#" class="tab">🏡 Vacation Rentals</a>
+      </div>
+
+      <div class="search-bar main-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Attraction, activity or destination" />
+        <button class="search-btn">Search</button>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <div class="i-hero">
+        <div class="i-hero-left">
+            <img src="./Images/Forums  New York.jpg" alt="Snorkeling">
+            <div class="i-tag">@mhdansif</div>
+        </div>
+        <div class="i-hero-right">
+            <h1>Book the best part of your trip</h1>
+            <p>Browse unforgettable things to do—right here.</p>
+            <button>Find things to do</button>
+        </div>
+    </div>
+
+    <!-- Interests -->
+    <div class="i-interest-section">
+        <h2>Find things to do by interest</h2>
+        <p>Whatever you’re into, we’ve got it</p>
+
+        <div class="i-card-container">
+            <div class="i-interest-card">
+                <img src="./Images/Florence Italy.jpg" alt="Outdoors">
+                <div class="i-interest-title">Outdoors</div>
+            </div>
+            <div class="i-interest-card">
+                <img src="./Images/Flight Bangkok.jpg" alt="Food">
+                <div class="i-interest-title">Food</div>
+            </div>
+            <div class="i-interest-card">
+                <img src="./Images/Ambuluwawa.jpg" alt="Culture">
+                <div class="i-interest-title">Culture</div>
+            </div>
+            <div class="i-interest-card">
+                <img src="./Images/Dubai.jpg" alt="Water">
+                <div class="i-interest-title">Water</div>
+            </div>
+        </div>
+    </div>
+
+    <section style="margin-top: 80px; padding: 0;">
+      <h3 style="padding: 15px 100px;">Recently viewed</h3>
+      <div class="hotel-card-container">
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/H1.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">Secrets Akumal Riviera Maya</h3>
+            <div class="rating"><span>4.8</span>
+              <div class="stars">★★★★★</div><span class="reviews">(13,976)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/H2.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">Grandvrio Ocean Resort Danang</h3>
+            <div class="rating"><span>4.9</span>
+              <div class="stars">★★★★★</div><span class="reviews">(3,167)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/H3.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">Gokulam Grand Turtle on the Beach</h3>
+            <div class="rating"><span>4.7</span>
+              <div class="stars">★★★★★</div><span class="reviews">(4,892)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/H4.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">Romance Istanbul Hotel</h3>
+            <div class="rating"><span>5.0</span>
+              <div class="stars">★★★★★</div><span class="reviews">(5,725)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card-container">
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/B4.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">The Cliff Bay, Madeira</h3>
+            <div class="rating"><span>4.6</span>
+              <div class="stars">★★★★☆</div><span class="reviews">(8,524)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/B3.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">Waldorf Astoria Maldives Ithaafushi</h3>
+            <div class="rating"><span>4.9</span>
+              <div class="stars">★★★★★</div><span class="reviews">(2,178)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/B2.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">Conrad Bora Bora Nui</h3>
+            <div class="rating"><span>4.8</span>
+              <div class="stars">★★★★★</div><span class="reviews">(3,654)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="h-image-wrapper">
+            <img src="./Images/B1.jpg" alt="Hotel Image" />
+            <div class="badge">2025</div>
+            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+          </div>
+          <div class="content">
+            <h3 class="hotel-name">The Oberoi Udaivilas, Udaipur</h3>
+            <div class="rating"><span>5.0</span>
+              <div class="stars">★★★★★</div><span class="reviews">(7,392)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+   <div class="i-interest-section">
+        <h2>You might like these</h2>
+        <p>More places to stay in Akumal</p>
+
+        <div class="i-card-container">
+            <div class="i-interest-card">
+                <img src="./Images/B4.jpg" alt="Fun">
+                <div class="i-interest-title">Fun</div>
+            </div>
+            <div class="i-interest-card">
+                <img src="./Images/B3.jpg" alt="Enjoy">
+                <div class="i-interest-title">Enjoy</div>
+            </div>
+            <div class="i-interest-card">
+                <img src="./Images/B2.jpg" alt="Boat">
+                <div class="i-interest-title">Boat Ride</div>
+            </div>
+            <div class="i-interest-card">
+                <img src="./Images/B1.jpg" alt="Travel">
+                <div class="i-interest-title">Travel</div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER START -->
+  <footer class="trip-footer">
+    <div class="footer-top">
+      <div class="footer-logo"><img src="./Images/tripadvisor-icon.webp" alt="Tripadvisor">Tripadvisor</div>
+
+      <div class="footer-links">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy and Cookies Statement</a>
+        <a href="#">Cookie Consent</a>
+        <a href="#">Site Map</a>
+        <a href="#">How the site works</a>
+        <a href="signin.html">Contact Us</a>
+        <a href="#">Accessibility Statement</a>
+      </div>
+    </div>
+
+    <div class="footer-description">
+      <p>
+        Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications.
+        Listed prices may require a stay of a particular length or have blackout dates, qualifications or other
+        applicable restrictions. Tripadvisor LLC is not responsible for any content on external websites that are not
+        owned or operated by Tripadvisor. Indicative hotel prices displayed on our “Explore” pages are estimates
+        extrapolated from historic pricing data.
+      </p>
+      <p>
+        Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure
+        to check their site for a full disclosure of all applicable fees.
+      </p>
+      <a href="#" class="read-more" onclick="toggleMore(event)">Read more</a>
+      <p class="more-text" style="display:none;">
+        We strive to provide accurate and up-to-date information. Currency and country options are subject to change.
+        This
+        site is part of Tripadvisor Media Network.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 MOHAMED ANSIF All rights reserved.</span>
+      <div class="footer-meta">
+        <select id="countrySelect" class="footer-dropdown" onchange="updateCurrency()">
+          <option value="LK">Sri Lanka</option>
+          <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+          <option value="NZ">New Zealand</option>
+          <option value="IN">India</option>
+          <option value="JP">Japan</option>
+          <option value="CN">China</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="IT">Italy</option>
+          <option value="BR">Brazil</option>
+          <option value="ZA">South Africa</option>
+          <option value="SG">Singapore</option>
+          <option value="MX">Mexico</option>
+          <option value="KR">South Korea</option>
+          <option value="SE">Sweden</option>
+          <option value="NO">Norway</option>
+          <option value="RU">Russia</option>
+        </select>
+
+        <select id="currencySelect" class="footer-dropdown">
+          <option value="LKR">LKR – ₨ (Sri Lankan Rupee)</option>
+          <option value="USD">USD – $ (US Dollar)</option>
+          <option value="GBP">GBP – £ (British Pound)</option>
+          <option value="CAD">CAD – C$ (Canadian Dollar)</option>
+          <option value="AUD">AUD – A$ (Australian Dollar)</option>
+          <option value="NZD">NZD – NZ$ (New Zealand Dollar)</option>
+          <option value="INR">INR – ₹ (Indian Rupee)</option>
+          <option value="JPY">JPY – ¥ (Japanese Yen)</option>
+          <option value="CNY">CNY – ¥ (Chinese Yuan)</option>
+          <option value="EUR">EUR – € (Euro)</option>
+          <option value="BRL">BRL – R$ (Brazilian Real)</option>
+          <option value="ZAR">ZAR – R (South African Rand)</option>
+          <option value="SGD">SGD – S$ (Singapore Dollar)</option>
+          <option value="MXN">MXN – $ (Mexican Peso)</option>
+          <option value="KRW">KRW – ₩ (South Korean Won)</option>
+          <option value="SEK">SEK – kr (Swedish Krona)</option>
+          <option value="NOK">NOK – kr (Norwegian Krone)</option>
+          <option value="RUB">RUB – ₽ (Russian Ruble)</option>
+        </select>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JS for Read More toggle -->
+  <script>
+    function toggleMore(event) {
+      event.preventDefault();
+      const moreText = document.querySelector('.more-text');
+      moreText.style.display = moreText.style.display === 'none' ? 'block' : 'none';
+      event.target.textContent = moreText.style.display === 'block' ? 'Read less' : 'Read more';
+    }
+  </script>
+
+  <script src="index.js" defer></script>
+
+</body>
+
+</html>

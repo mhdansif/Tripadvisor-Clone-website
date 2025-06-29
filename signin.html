@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TripAdvisor Style Multi-Page</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Reset & base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f7;
+            color: #232323;
+            line-height: 1.6;
+            padding: 30px 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Headings */
+        h1 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            color: #0f7e38;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Nav */
+        nav {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            cursor: pointer;
+            text-decoration: underline;
+            color: #0f7e38;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            color: #0b5d28;
+        }
+
+        /* Hide all sections */
+        section {
+            display: none;
+        }
+
+        /* Show active section */
+        section.active {
+            display: block;
+        }
+
+        /* Form Styles */
+        form {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d9dadb;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #232323;
+            font-size: 0.95rem;
+            margin-top: 15px;
+        }
+
+        select,
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d9dadb;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            background-color: #fff;
+        }
+
+        select:focus,
+        input:focus,
+        textarea:focus {
+            border-color: #0f7e38;
+            outline: none;
+            box-shadow: 0 0 5px rgba(15, 126, 56, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Button */
+        button {
+            margin-top: 25px;
+            background-color: #0f7e38;
+            border: none;
+            color: white;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0b5d28;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a data-target="preferences" class="active-link">Preferences</a>
+        <a data-target="contact">Contact Us</a>
+        <a data-target="signin">Sign In</a>
+    </nav>
+
+    <section id="preferences" class="active">
+        <h1>Preferences</h1>
+        <form>
+  <label for="region">Choose your region:</label>
+  <select id="region" name="region">
+    <option value="uk">United Kingdom</option>
+    <option value="us">United States</option>
+    <option value="india">India</option>
+    <option value="australia">Australia</option>
+    <option value="germany">Germany</option>
+    <option value="france">France</option>
+    <option value="brazil">Brasil</option>
+    <option value="russia">Россия</option>
+    <option value="china">中国</option>
+    <option value="japan">日本</option>
+    <option value="canada">Canada</option>
+    <option value="mexico">Mexico</option>
+    <option value="argentina">Argentina</option>
+    <option value="southafrica">South Africa</option>
+    <option value="italy">Italy</option>
+    <option value="spain">Spain</option>
+    <option value="netherlands">Netherlands</option>
+    <option value="sweden">Sweden</option>
+    <option value="norway">Norway</option>
+    <option value="finland">Finland</option>
+    <option value="denmark">Denmark</option>
+    <option value="ireland">Ireland</option>
+    <option value="belgium">Belgium</option>
+    <option value="portugal">Portugal</option>
+    <option value="greece">Greece</option>
+    <option value="switzerland">Switzerland</option>
+    <option value="austria">Austria</option>
+    <option value="poland">Poland</option>
+    <option value="hungary">Hungary</option>
+    <option value="czech">Czech Republic</option>
+    <option value="slovakia">Slovakia</option>
+    <option value="croatia">Croatia</option>
+    <option value="slovenia">Slovenia</option>
+    <option value="bulgaria">Bulgaria</option>
+    <option value="romania">Romania</option>
+    <option value="ukraine">Ukraine</option>
+    <option value="belarus">Belarus</option>
+    <option value="lithuania">Lithuania</option>
+    <option value="latvia">Latvia</option>
+    <option value="estonia">Estonia</option>
+    <option value="iceland">Iceland</option>
+    <option value="newzealand">New Zealand</option>
+    <option value="singapore">Singapore</option>
+    <option value="malaysia">Malaysia</option>
+    <option value="philippines">Philippines</option>
+    <option value="indonesia">Indonesia</option>
+    <option value="thailand">Thailand</option>
+    <option value="vietnam">Vietnam</option>
+    <option value="southkorea">South Korea</option>
+    <option value="taiwan">Taiwan</option>
+    <option value="hongkong">Hong Kong</option>
+    <option value="uae">United Arab Emirates</option>
+    <option value="saudiarabia">Saudi Arabia</option>
+    <option value="egypt">Egypt</option>
+    <option value="morocco">Morocco</option>
+    <option value="kenya">Kenya</option>
+    <option value="nigeria">Nigeria</option>
+  </select>
+
+  <label for="language">Choose your language:</label>
+  <select id="language" name="language">
+    <option value="english">English</option>
+    <option value="spanish">Español</option>
+    <option value="french">Français</option>
+    <option value="portuguese">Português</option>
+    <option value="german">Deutsch</option>
+    <option value="russian">Русский</option>
+    <option value="chinese">中文</option>
+    <option value="japanese">日本語</option>
+    <option value="italian">Italiano</option>
+    <option value="dutch">Nederlands</option>
+    <option value="swedish">Svenska</option>
+    <option value="norwegian">Norsk</option>
+    <option value="finnish">Suomi</option>
+    <option value="danish">Dansk</option>
+    <option value="greek">Ελληνικά</option>
+    <option value="hebrew">עברית</option>
+    <option value="arabic">العربية</option>
+    <option value="korean">한국어</option>
+    <option value="thai">ไทย</option>
+    <option value="vietnamese">Tiếng Việt</option>
+    <option value="hindi">हिन्दी</option>
+    <option value="bengali">বাংলা</option>
+    <option value="urdu">اردو</option>
+    <option value="persian">فارسی</option>
+    <option value="turkish">Türkçe</option>
+    <option value="polish">Polski</option>
+    <option value="czech">Čeština</option>
+    <option value="hungarian">Magyar</option>
+    <option value="romanian">Română</option>
+    <option value="ukrainian">Українська</option>
+    <option value="lithuanian">Lietuvių</option>
+    <option value="latvian">Latviešu</option>
+    <option value="estonian">Eesti</option>
+    <option value="icelandic">Íslenska</option>
+    <option value="malay">Bahasa Melayu</option>
+    <option value="indonesian">Bahasa Indonesia</option>
+    <option value="filipino">Filipino</option>
+    <option value="swahili">Kiswahili</option>
+    <option value="amharic">አማርኛ</option>
+    <option value="zulu">IsiZulu</option>
+    <option value="xhosa">IsiXhosa</option>
+    <option value="afrikaans">Afrikaans</option>
+    <option value="malagasy">Malagasy</option>
+    <option value="catalan">Català</option>
+    <option value="basque">Euskara</option>
+    <option value="galician">Galego</option>
+    <option value="welsh">Cymraeg</option>
+    <option value="irish">Gaeilge</option>
+    <option value="scottishgaelic">Gàidhlig</option>
+    <option value="esperanto">Esperanto</option>
+    <option value="latin">Latina</option>
+    <option value="esperanto">Esperanto</option>
+  </select>
+
+  <label for="currency">Choose your currency:</label>
+  <select id="currency" name="currency">
+    <option value="usd">USD - United States Dollar</option>
+    <option value="gbp">GBP - British Pound</option>
+    <option value="inr">INR - Indian Rupee</option>
+    <option value="eur">EUR - Euro</option>
+    <option value="aud">AUD - Australian Dollar</option>
+    <option value="brl">BRL - Brazilian Real</option>
+    <option value="rub">RUB - Russian Ruble</option>
+    <option value="jpy">JPY - Japanese Yen</option>
+    <option value="cny">CNY - Chinese Yuan</option>
+    <option value="cad">CAD - Canadian Dollar</option>
+    <option value="mxn">MXN - Mexican Peso</option>
+    <option value="zar">ZAR - South African Rand</option>
+    <option value="sek">SEK - Swedish Krona</option>
+    <option value="nok">NOK - Norwegian Krone</option>
+    <option value="chf">CHF - Swiss Franc</option>
+    <option value="try">TRY - Turkish Lira</option>
+    <option value="sgd">SGD - Singapore Dollar</option>
+    <option value="myr">MYR - Malaysian Ringgit</option>
+    <option value="thb">THB - Thai Baht</option>
+    <option value="krw">KRW - South Korean Won</option>
+    <option value="ars">ARS - Argentine Peso</option>
+    <option value="clp">CLP - Chilean Peso</option>
+    <option value="cop">COP - Colombian Peso</option>
+    <option value="dkk">DKK - Danish Krone</option>
+    <option value="egp">EGP - Egyptian Pound</option>
+    <option value="hkd">HKD - Hong Kong Dollar</option>
+    <option value="idR">IDR - Indonesian Rupiah</option>
+    <option value="ils">ILS - Israeli New Shekel</option>
+    <option value="jod">JOD - Jordanian Dinar</option>
+    <option value="kes">KES - Kenyan Shilling</option>
+    <option value="kwd">KWD - Kuwaiti Dinar</option>
+    <option value="lkr">LKR - Sri Lankan Rupee</option>
+    <option value="mad">MAD - Moroccan Dirham</option>
+    <option value="mmm">MMK - Myanmar Kyat</option>
+    <option value="ngn">NGN - Nigerian Naira</option>
+    <option value="pkr">PKR - Pakistani Rupee</option>
+    <option value="qar">QAR - Qatari Riyal</option>
+    <option value="sar">SAR - Saudi Riyal</option>
+    <option value="thb">THB - Thai Baht</option>
+    <option value="tnd">TND - Tunisian Dinar</option>
+    <option value="try">TRY - Turkish Lira</option>
+    <option value="uah">UAH - Ukrainian Hryvnia</option>
+    <option value="vef">VEF - Venezuelan Bolívar</option>
+    <option value="vnd">VND - Vietnamese Dong</option>
+    <option value="xaf">XAF - Central African CFA Franc</option>
+    <option value="xcd">XCD - East Caribbean Dollar</option>
+    <option value="xof">XOF - West African CFA Franc</option>
+  </select>
+
+  <button type="submit">Save Preferences</button>
+</form>
+
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section id="signin">
+        <h1>Sign In</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+            <button type="submit">Log In</button>
+        </form>
+    </section>
+ 
+    <!-- FOOTER START -->
+<footer class="trip-footer">
+  <div class="footer-top">
+    <div class="footer-logo"><img src="./Images/tripadvisor-icon.webp" alt="Tripadvisor">Tripadvisor</div>
+
+    <div class="footer-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy and Cookies Statement</a>
+      <a href="#">Cookie Consent</a>
+      <a href="#">Site Map</a>
+      <a href="#">How the site works</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Accessibility Statement</a>
+    </div>
+  </div>
+
+  <div class="footer-description">
+    <p>
+      Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications.
+      Listed prices may require a stay of a particular length or have blackout dates, qualifications or other
+      applicable restrictions. Tripadvisor LLC is not responsible for any content on external websites that are not
+      owned or operated by Tripadvisor. Indicative hotel prices displayed on our “Explore” pages are estimates extrapolated from historic pricing data.
+    </p>
+    <p>
+      Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure
+      to check their site for a full disclosure of all applicable fees.
+    </p>
+    <a href="#" class="read-more" onclick="toggleMore(event)">Read more</a>
+    <p class="more-text" style="display:none;">
+      We strive to provide accurate and up-to-date information. Currency and country options are subject to change. This
+      site is part of Tripadvisor Media Network.
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 MOHAMED ANSIF All rights reserved.</span>
+    <div class="footer-meta">
+  <select id="countrySelect" class="footer-dropdown" onchange="updateCurrency()">
+    <option value="LK">Sri Lanka</option>
+    <option value="US">United States</option>
+    <option value="UK">United Kingdom</option>
+    <option value="CA">Canada</option>
+    <option value="AU">Australia</option>
+    <option value="NZ">New Zealand</option>
+    <option value="IN">India</option>
+    <option value="JP">Japan</option>
+    <option value="CN">China</option>
+    <option value="DE">Germany</option>
+    <option value="FR">France</option>
+    <option value="IT">Italy</option>
+    <option value="BR">Brazil</option>
+    <option value="ZA">South Africa</option>
+    <option value="SG">Singapore</option>
+    <option value="MX">Mexico</option>
+    <option value="KR">South Korea</option>
+    <option value="SE">Sweden</option>
+    <option value="NO">Norway</option>
+    <option value="RU">Russia</option>
+  </select>
+
+  <select id="currencySelect" class="footer-dropdown">
+    <option value="LKR">LKR – ₨ (Sri Lankan Rupee)</option>
+    <option value="USD">USD – $ (US Dollar)</option>
+    <option value="GBP">GBP – £ (British Pound)</option>
+    <option value="CAD">CAD – C$ (Canadian Dollar)</option>
+    <option value="AUD">AUD – A$ (Australian Dollar)</option>
+    <option value="NZD">NZD – NZ$ (New Zealand Dollar)</option>
+    <option value="INR">INR – ₹ (Indian Rupee)</option>
+    <option value="JPY">JPY – ¥ (Japanese Yen)</option>
+    <option value="CNY">CNY – ¥ (Chinese Yuan)</option>
+    <option value="EUR">EUR – € (Euro)</option>
+    <option value="BRL">BRL – R$ (Brazilian Real)</option>
+    <option value="ZAR">ZAR – R (South African Rand)</option>
+    <option value="SGD">SGD – S$ (Singapore Dollar)</option>
+    <option value="MXN">MXN – $ (Mexican Peso)</option>
+    <option value="KRW">KRW – ₩ (South Korean Won)</option>
+    <option value="SEK">SEK – kr (Swedish Krona)</option>
+    <option value="NOK">NOK – kr (Norwegian Krone)</option>
+    <option value="RUB">RUB – ₽ (Russian Ruble)</option>
+  </select>
+</div>
+
+  </div>
+</footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetId = link.getAttribute('data-target');
+
+                // Remove active from all links
+                navLinks.forEach(l => l.classList.remove('active-link'));
+
+                // Add active to clicked link
+                link.classList.add('active-link');
+
+                // Hide all sections
+                sections.forEach(sec => sec.classList.remove('active'));
+
+                // Show targeted section
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

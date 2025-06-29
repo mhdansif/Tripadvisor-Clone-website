@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover top restaurants - Tripadvisor Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="only-compact">
+  <div id="header-container"></div>
+  <main>
+    <section class="hero">
+            <section >
+        <div class="image-container">
+          <img src="./Images/B5.jpg" alt="Sample Image" />
+          <div class="centered-text">Find your perfect restaurant</div>
+        </div>
+  
+      </section>
+
+
+
+      <div style="margin-top: 80px;" class="food-row">
+        <!-- Column 1: Popular Cuisines -->
+        <div class="food-column">
+          <h3>POPULAR CUISINES</h3>
+          <ul>
+            <li>African Food Near Me</li>
+            <li>British Food Near Me</li>
+            <li>Cajun Food Near Me</li>
+            <li>Caribbean Food Near Me</li>
+            <li>Chinese Food Near Me</li>
+            <li>Eastern European Food Near Me</li>
+            <li>French Food Near Me</li>
+            <li>German Food Near Me</li>
+            <li>Greek Food Near Me</li>
+            <li>Indian Food Near Me</li>
+            <li>International Food Near Me</li>
+            <li>Irish Food Near Me</li>
+            <li>Italian Food Near Me</li>
+            <li>Japanese Food Near Me</li>
+            <li>Mediterranean Food Near Me</li>
+            <li>Mexican Food Near Me</li>
+            <li>South American Food Near Me</li>
+            <li>Spanish Food Near Me</li>
+            <li>Thai Food Near Me</li>
+            <li>Vietnamese Food Near Me</li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Popular Restaurants -->
+        <div class="food-column">
+          <h3>POPULAR RESTAURANTS</h3>
+          <ul>
+            <li>American Restaurants Near Me</li>
+            <li>Asian Restaurants Near Me</li>
+            <li>BBQ Restaurants Near Me</li>
+            <li>European Restaurants Near Me</li>
+            <li>Fusion Restaurants Near Me</li>
+            <li>Middle Eastern Restaurants Near Me</li>
+            <li>Seafood Restaurants Near Me</li>
+            <li>Steakhouse Restaurants Near Me</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Other Food & Drink Nearby -->
+        <div class="food-column">
+          <h3>OTHER FOOD & DRINK NEARBY</h3>
+          <ul>
+            <li>Cafe Near Me</li>
+            <li>Deli Near Me</li>
+            <li>Pizza Near Me</li>
+            <li>Soup Near Me</li>
+            <li>Sushi Near Me</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </section>
+    <footer>
+      <!-- FOOTER START -->
+      <footer class="trip-footer">
+        <div class="footer-top">
+          <div class="footer-logo"><img src="./Images/tripadvisor-icon.webp" alt="Tripadvisor">Tripadvisor</div>
+
+          <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy and Cookies Statement</a>
+            <a href="#">Cookie Consent</a>
+            <a href="#">Site Map</a>
+            <a href="#">How the site works</a>
+            <a href="signin.html">Contact Us</a>
+            <a href="#">Accessibility Statement</a>
+          </div>
+        </div>
+
+        <div class="footer-description">
+          <p>
+            Tripadvisor LLC makes no guarantees for availability of prices advertised on our sites and applications.
+            Listed prices may require a stay of a particular length or have blackout dates, qualifications or other
+            applicable restrictions. Tripadvisor LLC is not responsible for any content on external websites that are
+            not
+            owned or operated by Tripadvisor. Indicative hotel prices displayed on our “Explore” pages are estimates
+            extrapolated from historic pricing data.
+          </p>
+          <p>
+            Tripadvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be
+            sure
+            to check their site for a full disclosure of all applicable fees.
+          </p>
+          <a href="#" class="read-more" onclick="toggleMore(event)">Read more</a>
+          <p class="more-text" style="display:none;">
+            We strive to provide accurate and up-to-date information. Currency and country options are subject to
+            change. This
+            site is part of Tripadvisor Media Network.
+          </p>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2025 MOHAMED ANSIF All rights reserved.</span>
+          <div class="footer-meta">
+            <select id="countrySelect" class="footer-dropdown" onchange="updateCurrency()">
+              <option value="LK">Sri Lanka</option>
+              <option value="US">United States</option>
+              <option value="UK">United Kingdom</option>
+              <option value="CA">Canada</option>
+              <option value="AU">Australia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="IN">India</option>
+              <option value="JP">Japan</option>
+              <option value="CN">China</option>
+              <option value="DE">Germany</option>
+              <option value="FR">France</option>
+              <option value="IT">Italy</option>
+              <option value="BR">Brazil</option>
+              <option value="ZA">South Africa</option>
+              <option value="SG">Singapore</option>
+              <option value="MX">Mexico</option>
+              <option value="KR">South Korea</option>
+              <option value="SE">Sweden</option>
+              <option value="NO">Norway</option>
+              <option value="RU">Russia</option>
+            </select>
+
+            <select id="currencySelect" class="footer-dropdown">
+              <option value="LKR">LKR – ₨ (Sri Lankan Rupee)</option>
+              <option value="USD">USD – $ (US Dollar)</option>
+              <option value="GBP">GBP – £ (British Pound)</option>
+              <option value="CAD">CAD – C$ (Canadian Dollar)</option>
+              <option value="AUD">AUD – A$ (Australian Dollar)</option>
+              <option value="NZD">NZD – NZ$ (New Zealand Dollar)</option>
+              <option value="INR">INR – ₹ (Indian Rupee)</option>
+              <option value="JPY">JPY – ¥ (Japanese Yen)</option>
+              <option value="CNY">CNY – ¥ (Chinese Yuan)</option>
+              <option value="EUR">EUR – € (Euro)</option>
+              <option value="BRL">BRL – R$ (Brazilian Real)</option>
+              <option value="ZAR">ZAR – R (South African Rand)</option>
+              <option value="SGD">SGD – S$ (Singapore Dollar)</option>
+              <option value="MXN">MXN – $ (Mexican Peso)</option>
+              <option value="KRW">KRW – ₩ (South Korean Won)</option>
+              <option value="SEK">SEK – kr (Swedish Krona)</option>
+              <option value="NOK">NOK – kr (Norwegian Krone)</option>
+              <option value="RUB">RUB – ₽ (Russian Ruble)</option>
+            </select>
+          </div>
+
+        </div>
+      </footer>
+
+    </footer>
+  </main>
+  <script src="index.js"></script>
+  <script src="load-header.js" defer></script>
+
+</body>
+
+</html>
